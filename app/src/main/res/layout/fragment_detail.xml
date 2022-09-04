@@ -6,10 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".DetailFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/yellow_light">
+        android:background="@color/yellow_light"
+        app:layoutDescription="@xml/fragment_detail_xml_constraintlayout_scene">
 
         <ImageView
             android:id="@+id/backBtn"
@@ -38,7 +40,7 @@
             android:id="@+id/box"
             android:layout_width="@dimen/pizza_box_size"
             android:layout_height="@dimen/pizza_box_size"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="150dp"
             android:src="@drawable/pizza_box2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -57,11 +59,14 @@
             app:layout_constraintVertical_bias="0.35000002" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="310dp"
+            android:id="@+id/constraintLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="-150dp"
             android:background="@drawable/bottom_sheet"
             app:layout_constraintBottom_toBottomOf="parent"
-            tools:layout_editor_absoluteX="-199dp">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
             <com.google.android.material.chip.ChipGroup
                 android:layout_width="wrap_content"
@@ -122,7 +127,7 @@
                 android:id="@+id/description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="24dp"
                 android:paddingStart="16dp"
                 android:paddingLeft="16dp"
                 android:text="@string/description"
@@ -164,7 +169,7 @@
                 android:layout_width="@dimen/order_button_width"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="#E4DFDF"
                 android:text="Add to Cart"
                 android:textColor="@color/orange"
                 android:textSize="@dimen/text_size"
@@ -174,5 +179,5 @@
                 app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.motion.widget.MotionLayout>
 </FrameLayout>

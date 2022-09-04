@@ -7,5 +7,11 @@
     <string name="pizza_name">Mushroom Pizza</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="small">Small</string>
+    <string name="medium">Medium</string>
+    <string name="large">Large</string>
+    <string name="pizza_details">Pizza Details</string>
+    <string name="description">One of the simplest and most traditional pizzas is the Margherita, which is topped with tomatoes or tomato sauce, mozzarella, and basil.</string>
+    <string name="price">$11.50</string>
 
 </resources>

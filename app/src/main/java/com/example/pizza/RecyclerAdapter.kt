@@ -5,11 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pizza.RecyclerAdapter.*
 
 class RecyclerAdapter : RecyclerView.Adapter<ViewHolder>() {
-
 
     private var titles = arrayOf("Mushroom Pizza","Shrimp Pizza","Napoliten Pizza","Pepperoni Pizza"
         ,"Veggie Pizza","Four Cheese Pizza")
@@ -44,6 +44,8 @@ class RecyclerAdapter : RecyclerView.Adapter<ViewHolder>() {
         holder.image.setImageResource(images[position])
 
         holder.itemView.setOnClickListener{
+
+            holder.itemView.findNavController().navigate(R.id.action_homeFragment_to_detailFragment)
 
         }
     }

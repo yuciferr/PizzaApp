@@ -1,14 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@color/yellow_light">
 
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_round_arrow_back_ios_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pizzaName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/pizza_name"
+            android:textSize="@dimen/header_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/box"
+            android:layout_width="@dimen/pizza_box_size"
+            android:layout_height="@dimen/pizza_box_size"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/pizza_box2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pizzaName" />
+
+        <ImageView
+            android:id="@+id/pizza"
+            android:layout_width="@dimen/pizza_size"
+            android:layout_height="@dimen/pizza_size"
+            android:src="@drawable/pizza1"
+            app:layout_constraintBottom_toBottomOf="@+id/box"
+            app:layout_constraintEnd_toEndOf="@+id/box"
+            app:layout_constraintStart_toStartOf="@+id/box"
+            app:layout_constraintTop_toTopOf="@+id/box"
+            app:layout_constraintVertical_bias="0.35000002" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            android:background="@drawable/bottom_sheet"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="-199dp">
+
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:checkedChip="@id/medium"
+                app:chipSpacingHorizontal="@dimen/side_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/small"
+                    android:layout_width="@dimen/chip_width"
+                    android:layout_height="@dimen/chip_height"
+                    android:text="@string/small"
+                    android:textAlignment="center"
+                    android:textColor="#3E2723"
+                    android:textSize="@dimen/text_size"
+                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/medium"
+                    android:layout_width="@dimen/chip_width"
+                    android:layout_height="@dimen/chip_height"
+                    android:text="@string/medium"
+                    android:textAlignment="center"
+                    android:textColor="#3E2723"
+                    android:textSize="@dimen/text_size"
+                    tools:ignore="TextContrastCheck" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/large"
+                    android:layout_width="@dimen/chip_width"
+                    android:layout_height="@dimen/chip_height"
+                    android:text="@string/large"
+                    android:textAlignment="center"
+                    android:textColor="#3E2723"
+                    android:textSize="@dimen/text_size"
+                    tools:ignore="TextContrastCheck" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/pizza_details"
+                android:textColor="@color/white"
+                android:textSize="@dimen/header_text_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:text="@string/description"
+                android:textSize="@dimen/text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/price"
+                android:textColor="@color/white"
+                android:textSize="@dimen/header_text_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="@dimen/order_button_width"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Order Now "
+                android:textSize="@dimen/text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button2"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="@dimen/order_button_width"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/white"
+                android:text="Add to Cart"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

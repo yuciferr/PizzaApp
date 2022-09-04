@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Pizza</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="splash_text">Pizza App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="welcome_message">Welcome,\nChoose Your Pizza</string>
+    <string name="pizza_name">Mushroom Pizza</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

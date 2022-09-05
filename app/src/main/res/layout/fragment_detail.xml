@@ -58,57 +58,59 @@
             app:layout_constraintTop_toTopOf="@+id/box"
             app:layout_constraintVertical_bias="0.35000002" />
 
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-16dp"
+            app:checkedChip="@id/medium"
+            app:chipSpacingHorizontal="@dimen/side_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/box">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/small"
+                android:layout_width="@dimen/chip_width"
+                android:layout_height="@dimen/chip_height"
+                android:text="@string/small"
+                android:textAlignment="center"
+                android:textColor="#3E2723"
+                android:textSize="@dimen/text_size"
+                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/medium"
+                android:layout_width="@dimen/chip_width"
+                android:layout_height="@dimen/chip_height"
+                android:text="@string/medium"
+                android:textAlignment="center"
+                android:textColor="#3E2723"
+                android:textSize="@dimen/text_size"
+                tools:ignore="TextContrastCheck" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/large"
+                android:layout_width="@dimen/chip_width"
+                android:layout_height="@dimen/chip_height"
+                android:text="@string/large"
+                android:textAlignment="center"
+                android:textColor="#3E2723"
+                android:textSize="@dimen/text_size"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.chip.ChipGroup>
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_marginBottom="-150dp"
+            android:layout_marginBottom="-70dp"
             android:background="@drawable/bottom_sheet"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
-            <com.google.android.material.chip.ChipGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                app:checkedChip="@id/medium"
-                app:chipSpacingHorizontal="@dimen/side_margin"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/description">
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/small"
-                    android:layout_width="@dimen/chip_width"
-                    android:layout_height="@dimen/chip_height"
-                    android:text="@string/small"
-                    android:textAlignment="center"
-                    android:textColor="#3E2723"
-                    android:textSize="@dimen/text_size"
-                    tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/medium"
-                    android:layout_width="@dimen/chip_width"
-                    android:layout_height="@dimen/chip_height"
-                    android:text="@string/medium"
-                    android:textAlignment="center"
-                    android:textColor="#3E2723"
-                    android:textSize="@dimen/text_size"
-                    tools:ignore="TextContrastCheck" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/large"
-                    android:layout_width="@dimen/chip_width"
-                    android:layout_height="@dimen/chip_height"
-                    android:text="@string/large"
-                    android:textAlignment="center"
-                    android:textColor="#3E2723"
-                    android:textSize="@dimen/text_size"
-                    tools:ignore="TextContrastCheck" />
-            </com.google.android.material.chip.ChipGroup>
 
             <TextView
                 android:id="@+id/textView6"

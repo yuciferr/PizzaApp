@@ -10,7 +10,7 @@
     <dimen name="star_size">30dp</dimen>
     <dimen name="pizza_box_size">375dp</dimen>
     <dimen name="pizza_size">275dp</dimen>
-    <dimen name="chip_width">120dp</dimen>
+    <dimen name="chip_width">115dp</dimen>
     <dimen name="chip_height">55dp</dimen>
     <dimen name="order_button_width">190dp</dimen>
 </resources>

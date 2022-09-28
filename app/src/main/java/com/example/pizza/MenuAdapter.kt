@@ -7,17 +7,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.example.pizza.RecyclerAdapter.*
+import com.example.pizza.MenuAdapter.*
 
-class RecyclerAdapter : RecyclerView.Adapter<ViewHolder>() {
+class MenuAdapter : RecyclerView.Adapter<ViewHolder>() {
 
-    private var titles = arrayOf("Mushroom Pizza","Shrimp Pizza","Napoliten Pizza","Pepperoni Pizza"
-        ,"Veggie Pizza","Four Cheese Pizza")
-    private var prices = arrayOf("$9.00","$14.00","$8.00","$10.50"
-        ,"$8.00","$11.50")
-    private var images = intArrayOf(R.drawable.pizza1,R.drawable.pizza2,R.drawable.pizza3,
-        R.drawable.pizza4,R.drawable.pizza5,R.drawable.pizza6)
-
+    var pizzaList : ArrayList<Pizza> = pizzas
 
     inner class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
         var title:TextView
@@ -26,7 +20,7 @@ class RecyclerAdapter : RecyclerView.Adapter<ViewHolder>() {
 
         init {
             title = itemView.findViewById(R.id.textView2)
-            image = itemView.findViewById(R.id.imageView)
+            image = itemView.findViewById(R.id.pizzaImage)
             price = itemView.findViewById(R.id.price)
 
         }
@@ -39,9 +33,11 @@ class RecyclerAdapter : RecyclerView.Adapter<ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.title.text = titles[position]
-        holder.price.text = prices[position]
-        holder.image.setImageResource(images[position])
+
+        val pizza = pizzaList[position]
+        holder.image.setImageResource(pizza.img)
+        holder.price.text = pizza.price.toString()
+        holder.title.text = pizza.name.toString()
 
         holder.itemView.setOnClickListener{
 
@@ -51,6 +47,6 @@ class RecyclerAdapter : RecyclerView.Adapter<ViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        return titles.size
+        return pizzaList.size
     }
 }

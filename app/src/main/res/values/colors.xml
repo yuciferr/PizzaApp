@@ -6,4 +6,5 @@
     <color name="yellow_light">#ffda81</color>
     <color name="orange">#f0621a</color>
     <color name="orange_light">#E97338</color>
+    <color name="grey_chip">#F3F3F3</color>
 </resources>

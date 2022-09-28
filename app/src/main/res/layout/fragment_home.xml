@@ -20,6 +20,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
                 android:text="@string/welcome_message"
+                android:textColor="?android:attr/textColorPrimaryNoDisable"
                 android:textSize="@dimen/title_text_size"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
